@@ -4,12 +4,17 @@
 (require 'ibus)
 (add-hook 'after-init-hook 'ibus-mode-on)
 
-(setq ispell-dictionary "british")
-(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+;;(setq ispell-dictionary "british")
+;;(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+(dolist (hook '(text-mode-hook))
+        (add-hook hook (lambda () (flyspell-mode 1))))
+
 (load-file "~/.emacs.d/themes/monokai-theme.el")
 (color-theme-monokai)
+
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
+
 (show-paren-mode t)
 (line-number-mode t)
 (column-number-mode t)
@@ -26,7 +31,7 @@
 ;;(setq fci-rule-color "red")
 ;;(setq-default fci-rule-column 80)
 
-(setq TeX-PDF-mode t)
+(setq TeX-PDF-mode t) ;; make pdf the default auctex generating format
 
 ;; racket
 (require 'quack)
