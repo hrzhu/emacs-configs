@@ -35,7 +35,7 @@
 
 ;; racket
 (require 'quack)
-(load-file "~/.emacs.d/geiser-0.3/elisp/geiser.el")
+(load-file "~/.emacs.d/geiser/elisp/geiser.el")
 (add-hook 'scheme-mode-hook 'geiser-mode)
 (load-file "~/.emacs.d/scheme-complete/scheme-complete-0.8.7.el")
 (autoload 'scheme-smart-complete "scheme-complete" nil t)
