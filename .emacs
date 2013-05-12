@@ -20,6 +20,10 @@
 (column-number-mode t)
 ;;(global-linum-mode t)
 
+;;horizontal splitting
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
+
 (require 'whitespace)
 (setq-default whitespace-style '(face trailing lines-tail))
 (setq whitespace-line-column 80)
